@@ -1,0 +1,22 @@
+server:
+  port: 8080
+spring:
+  main:
+    allow-circular-references: true
+  datasource:
+    url: jdbc:h2:mem:mydb
+    username: sa
+    password: saa
+    driverClassName: org.h2.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+  h2:
+    console:
+      enabled: true
+
+external-api:
+  PollApp:
+    name: "pollapp-api"
+    url : "http://localhost:8081"
+
